@@ -1,0 +1,157 @@
+body {
+    background-color: #3e8e41;
+}
+.head {
+    backdrop-filter: blur(10px);
+    width: 98.5%;
+    position: absolute;
+}
+.title {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: inline;
+    font-size: 750%;
+    padding-left: 1%;
+    text-shadow: 2px 2px #3e8e41;
+}
+
+.h-graphic {
+    position: relative;
+    display: block;
+    z-index: -999;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+  float: left;
+  background-color: transparent;
+  color: white;
+  text-shadow: 2px 2px black;
+  padding: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
+  backdrop-filter: blur(10px);
+  margin-bottom: 1%;
+  white-space: nowrap;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  backdrop-filter: blur(10px);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-style: solid;
+  border-width: 1px;
+  background-color: #3e8e41;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  text-shadow: 2px 2px black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background-color: #3e8e41;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: gray;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  margin-top: 50px;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.menu_btn {
+  background-color: transparent;
+  color: white;
+  text-shadow: 2px 2px black;
+  padding: 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  backdrop-filter: blur(10px);
+  display: inline;
+  float: right;
+  margin-right: 1%;
+}
+
+.plan_text {
+  float: right;
+  font-style: italic;
+  font-weight: bold;
+  margin-right: .5%;
+}
+
+.menu_btn:hover {
+    background-color: #3e8e41;
+}
+
+.navbar {
+    display: block;
+    width: 101%;
+    background-color: #3e8e41;
+    position: fixed;
+    max-height: 50%;
+    text-align: left;
+}
+
+.overview {
+  background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url("img/overview-backdrop.jpg");
+  background-color: white; 
+  position:static; 
+  max-width:75%; 
+  z-index: 1; 
+  display: block; 
+  text-align: center; 
+  border-radius: 10px;
+  max-height: 500%;
+  overflow: visible;
+}
+
+.citation {
+  border-color: white;
+  border-width: 1px; color: white;
+  border-style: solid;
+  background-color: transparent;
+  text-shadow: 2px, 2px black;
+  position: relative; float: right;
+  margin-right: 1%;
+  margin-top: -3%;
+  font-size:small;
+}
+
+.activity_btn {
+  display: block;
+  max-width: 100%;
+  margin: 100%;
+}
+
+.img_btn {
+  max-width: 100%; 
+  border-radius: 5px;
+  margin: 1%;
+}
+
+.img_btn:hover {
+  filter: blur(2px);
+}
