@@ -9,7 +9,7 @@
                 <span>
                     <div>
                         <div class="dropdown">
-                            <button class="dropbtn">Urban and Outdoor Fun!</button>
+                            <button id="fun_btn" class="dropbtn">Urban and Outdoor Fun!</button>
                             <div class="dropdown-content">
                                 <a href="#">Link 1</a>
                                 <a href="#">Link 2</a>
@@ -17,10 +17,10 @@
                             </div>
                         </div>
                         <div class="dropdown">
-                            <button class="dropbtn">Nature Escapes!</button>
+                            <button id="nature_btn" class="dropbtn">Nature Escapes!</button>
                             <div class="dropdown-content">
                                 <p style="background-color: #327434; font-weight: bold; color: white; text-shadow: 2px 2px black; padding: 8px; font-size:larger;">Beautiful Beaches!</p>
-                                <a href="#">Hegume Beach</a>
+                                <a href="#">Yellow-Leaf Bay</a>
                                 <a href="#">Prismo Beach</a>
                                 <a href="#">Kaelua Shore</a> <!--Volcano beach-->
                                 <p style="background-color: #327434; font-weight: bold; color: white; text-shadow: 2px 2px black; padding: 8px; font-size:larger;">Active Volcano!</p>
@@ -32,7 +32,7 @@
                             </div>
                         </div>
                         <div class="dropdown">
-                            <button class="dropbtn">Lodging Options!</button>
+                            <button id="lodging_btn" class="dropbtn">Lodging Options!</button>
                             <div class="dropdown-content">
                                 <p style="background-color: #327434; font-weight: bold; color: white; text-shadow: 2px 2px black;  padding: 8px; font-size:larger;">Hotels</p>
                                 <a href="#">Volcano Drift Inn</a>
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                         <div class="menu_btn">Plan now!</div>
-                        <p class="plan_text" style="display: inline">Ready to get started?</p>
+                        <p class="plan_text">Ready to get started?</p>
                     </div>
                 </span>
             </p>
@@ -58,19 +58,25 @@
             </div>
         </div>
     </head>
-    <body>
+    <body style="position: relative; z-index: -6;">
         <div id="graphicdiv">
             <video class="h-graphic" id="homevideo" autoplay="autoplay" width=99% muted src="img/locations/prismo_beach.mp4"></video>
         </div>
-        <div style="max-width: 99%; display:block; text-align: center; justify-content: center;">
+        <div style="max-width: 99%; display:block; text-align: center; justify-content: center; position: relative; z-index: -5;">
             <div class="overview">
                 <p style="font-size: 700%; padding-top: 1%; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 1%;"><strong>About Taniti!</strong><p>
-                <p id="overview-text" style="display: block; font-size: x-large; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 0% 10%; padding-bottom: 5%">
+                <p id="overview-text" style="display: block; font-size: x-large; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 0% 10%; padding-bottom: 1%">
                     Taniti is a small tropical island in the Pacific. While the island has an area of less than 500 square miles, the terrain is varied, and includes both sandy and rocky
                     beaches, a small but safe harbor, lush tropical rainforests, and a mountainous interior that includes a small, active volcano. Taniti has an indigenous population of about
-                    20,000. Taniti's economy consists of tourism, fishing and agriculture.
+                    20,000. Taniti's economy primarily consists of tourism, with roots in fishing and agriculture. <br> Taniti has several options for your travel needs. Arrival can take place via air or ship, and the island has both public, and private ground 
+                    transportation.
                 </p>
-                
+                <p style="font-size: 200%; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 1%;"><strong>Guest Safety</strong><p></p>
+                <p id="overview-text" style="display: block; font-size: x-large; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 0% 10%; padding-bottom: 5%">
+                    The safety of travellers is a top priority on the island of Taniti. All lodging vendors are strictly regulated to ensure guest safety. Taniti also boasts a low crime rate. 
+                    Most incidents arise due to low-level pickpocketing. While excursions into nature can be dangerous, organizations host very capable guides to provide vacationers' with safe
+                    and memorable experiences. 
+                </p>
                 <p id="overview-title" style="font-size: 700%; margin: 0%; padding-top: 1%; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><strong>Downtown</strong></p>
                 <p id="overview-text" style="display: block; font-size: x-large; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 0% 10%; padding-bottom: 1%">
                     Taniti boasts a growing city life, as more venues spring up to accomodate more tourists.
@@ -79,22 +85,58 @@
                 <div class="activity-btn">
                     <div style="display: inline-block; max-width: 15%;">
                         <img class="img_btn" src="img/activities/dance-club.jpg">
-                        <p class="img_btn_lbl"style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Dance Club!</p>
+                        <p class="img_btn_lbl">Dance Club!</p>
                     </div>
                     <div style="display: inline-block; max-width: 15%;">
                         <img class="img_btn" src="img/activities/museum.jpg">
-                        <p class="img_btn_lbl"style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">History Museum!</p>
+                        <p class="img_btn_lbl">History Museum!</p>
                     </div>
                     <div style="display: inline-block; max-width: 15%;">
                         <img class="img_btn" src="img/activities/resturant.jpg">
-                        <p class="img_btn_lbl"style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Resturants!</p>
+                        <p class="img_btn_lbl">Several Resturants!</p>
                     </div>
                 </div>
                 <div style="padding-bottom: 5%;"></div>
-                <p class="citation" style="border-color: black; color:black;">
+                <p class="citation" id="btn_citation1" style="border-color: black; color:black; font-size: xxsmall; visibility: hidden;">
+                    Popov, A. (n.d.). a-group-of-people-standing-around-in-a-room-9vDdkxSCAD4. https://unsplash.com/photos/a-group-of-people-standing-around-in-a-room-9vDdkxSCAD4. Retrieved June 16, 2025, from https://unsplash.com/photos/a-group-of-people-standing-around-in-a-room-9vDdkxSCAD4. 
+                </p>
+                <p id="overview-title" style="font-size: 700%; margin: 0%; padding-top: 1%; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><strong>Sights to see!</strong></p>
+                <p id="overview-text" style="display: block; font-size: x-large; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin: 0% 10%; padding-bottom: 1%">
+                    Discover beautiful scenery from Taniti's abundance of gorgeous landmarks.
+                </p>
+
+                <div class="activity-btn">
+                    <div style="display: inline-block; max-width: 15%;">
+                        <img class="img_btn" src="img/locations/Mount Tumoko.jpg">
+                        <p class="img_btn_lbl">Mount Tumoko!</p>
+                    </div>
+                    <div style="display: inline-block; max-width: 15%;">
+                        <img class="img_btn" src="img/locations/Te Moari Canopy.jpg">
+                        <p class="img_btn_lbl">Te Moari Canopy!</p>
+                    </div>
+                    <div style="display: inline-block; max-width: 15%;">
+                        <img class="img_btn" src="img/locations/Kaelua Shore.jpg">
+                        <p class="img_btn_lbl">Kaelua Shore!</p>
+                    </div>
+                </div>
+                <div style="padding-bottom: 5%;"></div>
+                <p class="citation" id="btn_citation2" style="border-color: black; color:black; font-size: xxsmall; visibility: hidden;">
+                    Elliott, T. (n.d.-a). brown-mountain-under-gray-clouds-mBXXP7ns6lM. https://unsplash.com/photos/brown-mountain-under-gray-clouds-mBXXP7ns6lM. Retrieved June 17, 2025, from https://unsplash.com/photos/brown-mountain-under-gray-clouds-mBXXP7ns6lM.
+                </p>
+
+                <div style="padding-bottom: 5%;"></div>
+                <p class="citation" style="border-color: black; color:black; font-size: xxsmall;">
                     Shuliahin, N. (n.d.). map-illustration-rkFIIE9PxH0. https://unsplash.com/photos/map-illustration-rkFIIE9PxH0. Retrieved June 16, 2025, from https://unsplash.com/photos/map-illustration-rkFIIE9PxH0. 
                 </p>
             </div>
         </div>
     </body>
+    <footer>
+        <div class="foot_div">
+            <p style="float: left;">Support | Contact Us! | Careers</p>
+            <p style="float: right">Facebook | Instagram | Twitter</p>
+            <img style="max-width: 7%;" src="img/Taniti-Flag.png" style="margin: auto">
+            <p style="margin: auto;">Website Licensed by the Government of Taniti. Copyrights Reserved</p>
+        </div>
+    </footer>
 </html>

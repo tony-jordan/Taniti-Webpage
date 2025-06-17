@@ -3,7 +3,7 @@ body {
 }
 .head {
     backdrop-filter: blur(10px);
-    width: 98.5%;
+    width: 99%;
     position: absolute;
 }
 .title {
@@ -12,6 +12,10 @@ body {
     font-size: 750%;
     padding-left: 1%;
     text-shadow: 2px 2px #3e8e41;
+}
+
+.title:hover {
+  text-decoration: underline;
 }
 
 .h-graphic {
@@ -100,6 +104,9 @@ body {
   font-style: italic;
   font-weight: bold;
   margin-right: .5%;
+  display: inline; 
+  text-shadow: 2px 2px black;
+  color: white;
 }
 
 .menu_btn:hover {
@@ -118,15 +125,16 @@ body {
 .overview {
   background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url("img/overview-backdrop.jpg");
   background-color: white; 
-  position:static; 
+  position:relative; 
   max-width:75%; 
-  z-index: 1; 
+  z-index: -1; 
   display: block; 
   text-align: center; 
   border-radius: 10px;
   max-height: 500%;
   overflow: visible;
   margin: auto;
+
 }
 
 .citation {
@@ -138,7 +146,8 @@ body {
   position: relative; float: right;
   margin-right: 1%;
   margin-top: -3%;
-  font-size:small;
+  font-size: small;
+  z-index: -1;
 }
 
 .activity_btn {
@@ -155,4 +164,16 @@ body {
 
 .img_btn:hover {
   filter: blur(2px);
+}
+
+.img_btn_lbl {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.foot_div {
+  max-width:100%;
+  margin-top: 10%;
+  background-color: #327434;
+  padding: 1%;
+  text-align: center;
 }

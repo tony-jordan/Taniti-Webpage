@@ -6,22 +6,49 @@ async function init() {
 
     const locations = [
         "img/locations/hegume_beach.mp4",
-        "img/locations/kaelua_shore.mp4"
+        "img/locations/kaelua_shore.mp4",
+        "img/locations/mount_tumoko.mp4",
+        "img/locations/ravakiri_falls.mp4"
+
     ];
 
     const graphic_citations = [
         "WinstonRHA. (n.d.-b). sunset-beach-pismo-beach-palm-trees-129736. pixabay.com. Retrieved June 14, 2025, from https://pixabay.com/videos/sunset-beach-pismo-beach-palm-trees-129736/.",
         "Echeverri, M. (n.d.). bike-beach-biker-mountain-bike-72566. pixabay.com. Retrieved June 14, 2025, from https://pixabay.com/videos/bike-beach-biker-mountain-bike-72566/.",
-        "Lukin, A. (n.d.). costa-rica-caribbean-sea-sky-drone-139487. https://pixabay.com/videos/costa-rica-caribbean-sea-sky-drone-139487/. Retrieved June 16, 2025, from https://pixabay.com/videos/costa-rica-caribbean-sea-sky-drone-139487/. "
+        "Lukin, A. (n.d.). costa-rica-caribbean-sea-sky-drone-139487. https://pixabay.com/videos/costa-rica-caribbean-sea-sky-drone-139487/. Retrieved June 16, 2025, from https://pixabay.com/videos/costa-rica-caribbean-sea-sky-drone-139487/.",
+        "Lam, T. (n.d.). lava-volcano-lava-flow-fire-crater-219834/. https://pixabay.com/videos/lava-volcano-lava-flow-fire-crater-219834/. Retrieved June 17, 2025, from https://pixabay.com/videos/lava-volcano-lava-flow-fire-crater-219834/.",
+        "Ronin Studio. (n.d.). waterfall-water-river-nature-37088. https://pixabay.com/videos/waterfall-water-river-nature-37088/. Retrieved June 17, 2025, from https://pixabay.com/videos/waterfall-water-river-nature-37088/."
     ]
 
-    const btn_citations = [
-        "Szeglat, M. (n.d.). photo-of-lava-flowing-on-land-Aduh0KXCI1w. Retrieved 16AD, from https://unsplash.com/photos/photo-of-lava-flowing-on-land-Aduh0KXCI1w.", // lava dripping
-        "Popov, A. (n.d.). a-group-of-people-standing-around-in-a-room-9vDdkxSCAD4. https://unsplash.com/photos/a-group-of-people-standing-around-in-a-room-9vDdkxSCAD4. Retrieved June 16, 2025, from https://unsplash.com/photos/a-group-of-people-standing-around-in-a-room-9vDdkxSCAD4. ", // dance club
-        "Ganzhyi, N. (n.d.). a-man-riding-a-zip-line-through-a-forest-LGeVDlR8oUk. https://unsplash.com/photos/a-man-riding-a-zip-line-through-a-forest-LGeVDlR8oUk. Retrieved June 16, 2025, from https://unsplash.com/photos/a-man-riding-a-zip-line-through-a-forest-LGeVDlR8oUk.", // zip line
+    const btn_citations1 = [
+        "Popov, A. (n.d.). a-group-of-people-standing-around-in-a-room-9vDdkxSCAD4. https://unsplash.com/photos/a-group-of-people-standing-around-in-a-room-9vDdkxSCAD4. Retrieved June 16, 2025, from https://unsplash.com/photos/a-group-of-people-standing-around-in-a-room-9vDdkxSCAD4.", // dance club
         "Schwarz, D. J. (n.d.). white-concrete-building-under-white-clouds-during-daytime-EhaYSYy3Zdk. https://unsplash.com/photos/white-concrete-building-under-white-clouds-during-daytime-EhaYSYy3Zdk. Retrieved June 16, 2025, from https://unsplash.com/photos/white-concrete-building-under-white-clouds-during-daytime-EhaYSYy3Zdk.", // museum
         "Wennington, J. (n.d.). dish-on-white-ceramic-plate-N_Y88TWmGwA. https://unsplash.com/photos/dish-on-white-ceramic-plate-N_Y88TWmGwA. Retrieved June 16, 2025, from https://unsplash.com/photos/dish-on-white-ceramic-plate-N_Y88TWmGwA." // dish
     ]
+    const btn_citations2 = [
+        "Elliott, T. (n.d.-a). brown-mountain-under-gray-clouds-mBXXP7ns6lM. https://unsplash.com/photos/brown-mountain-under-gray-clouds-mBXXP7ns6lM. Retrieved June 17, 2025, from https://unsplash.com/photos/brown-mountain-under-gray-clouds-mBXXP7ns6lM.",
+        "Kettle, J. (n.d.). a-wooden-bridge-in-the-woods-zV4FJUo8MeE. https://unsplash.com/photos/a-wooden-bridge-in-the-woods-zV4FJUo8MeE. Retrieved June 17, 2025, from https://unsplash.com/photos/a-wooden-bridge-in-the-woods-zV4FJUo8MeE.",
+        "Santos, B. (n.d.). a-body-of-water-surrounded-by-mountains-and-trees-D8h8lXjVFa4. https://unsplash.com/photos/a-body-of-water-surrounded-by-mountains-and-trees-D8h8lXjVFa4. Retrieved June 17, 2025, from https://unsplash.com/photos/a-body-of-water-surrounded-by-mountains-and-trees-D8h8lXjVFa4."
+    ]
+
+    const title_btn = document.querySelector(".title");
+    title_btn.addEventListener("click", function() {
+        window.location.href = "home.html"
+    });
+    const lodge_btn = document.querySelector("#lodging_btn");
+    lodge_btn.addEventListener("click", function() {
+        window.location.href = "lodging-options.html"
+    });
+    const nature_btn = document.querySelector("#nature_btn");
+    nature_btn.addEventListener("click", function() {
+        window.location.href = "places-to-go.html"
+    });
+
+    const fun_btn = document.querySelector("#fun_btn");
+    fun_btn.addEventListener("click", function() {
+        window.location.href = "things-to-do.html"
+    });
+
 
     const vid_node = document.querySelector("#homevideo");
     vid_node.addEventListener("ended", changeGraphic)
@@ -47,6 +74,27 @@ async function init() {
 
     window.addEventListener('resize', updatemargin);
 
+    const img_btns = document.querySelectorAll(".img_btn");
+    for (let x = 0; x < 3; x++) {
+        img_btns[x].addEventListener("mouseover", function() {
+            document.querySelector("#btn_citation1").style.visibility = "visible";
+            document.querySelector("#btn_citation1").textContent = btn_citations1[x];
+        });
+        img_btns[x].addEventListener("mouseleave", function() {
+            document.querySelector("#btn_citation1").style.visibility = "hidden";
+        });
+    }
+    for (let x = 3; x < 6; x++) {
+        img_btns[x].addEventListener("mouseover", function() {
+            document.querySelector("#btn_citation2").style.visibility = "visible";
+            document.querySelector("#btn_citation2").textContent = btn_citations2[x - 3];
+        });
+        img_btns[x].addEventListener("mouseleave", function() {
+            document.querySelector("#btn_citation2").style.visibility = "hidden";
+        });
+    }
+    
+
     function changeGraphic() {
         videos[index].style.display = "none";
         index += 1;
@@ -60,7 +108,6 @@ async function init() {
     }
 
     function updatemargin() {
-        console.log(window.outerWidth)
         const margin = document.querySelector(".plan_text");
         if (window.outerWidth < 543) {
             document.querySelector("#cnr").style.display = "none"
@@ -81,6 +128,10 @@ async function init() {
             }
             txts[x].style.margin = "0%";
             txts[x].style.fontSize = "medium"
+            const lbls = document.querySelectorAll(".img_btn_lbl");
+            for (let x = 0; x < lbls.length; x++) {
+                lbls[x].style.fontSize = "xx-small";
+            }
         }
         else {
             document.querySelector(".overview").style.maxWidth = "75%"
@@ -93,6 +144,10 @@ async function init() {
             document.querySelector("#overview-title").style.fontSize = "700%";
             document.querySelector("#cnr").style.display = "inline";
             document.querySelector("#menu_btn").style.float = "right";
+            const lbls = document.querySelectorAll(".img_btn_lbl");
+            for (let x = 0; x < lbls.length; x++) {
+                lbls[x].style.fontSize = "small";
+            }
         }
     }
 }
