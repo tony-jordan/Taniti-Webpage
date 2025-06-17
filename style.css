@@ -126,6 +126,7 @@ body {
   border-radius: 10px;
   max-height: 500%;
   overflow: visible;
+  margin: auto;
 }
 
 .citation {

@@ -60,8 +60,16 @@ async function init() {
     }
 
     function updatemargin() {
+        console.log(window.outerWidth)
         const margin = document.querySelector(".plan_text");
-        if (window.outerWidth < 698) {
+        if (window.outerWidth < 543) {
+            document.querySelector("#cnr").style.display = "none"
+            document.querySelector("#menu_btn").style.float = "none";
+        }
+        else if (window.outerWidth < 595) {
+            document.querySelector("#overview-title").style.fontSize = "600%";
+        }
+        else if (window.outerWidth < 698) {
             margin.style.display = "none"
         }
         else if (window.outerWidth < 1045) {
@@ -82,6 +90,9 @@ async function init() {
                 txts[x].style.fontSize = "x-large";
             }
             margin.style.display = "inline";
+            document.querySelector("#overview-title").style.fontSize = "700%";
+            document.querySelector("#cnr").style.display = "inline";
+            document.querySelector("#menu_btn").style.float = "right";
         }
     }
 }
