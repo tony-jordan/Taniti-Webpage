@@ -31,6 +31,8 @@ async function init() {
         "Santos, B. (n.d.). a-body-of-water-surrounded-by-mountains-and-trees-D8h8lXjVFa4. https://unsplash.com/photos/a-body-of-water-surrounded-by-mountains-and-trees-D8h8lXjVFa4. Retrieved June 17, 2025, from https://unsplash.com/photos/a-body-of-water-surrounded-by-mountains-and-trees-D8h8lXjVFa4."
     ]
 
+    var g_hearts = [document.querySelector("#graphic-fav")];
+
     const title_btn = document.querySelector(".title");
     title_btn.addEventListener("click", function() {
         window.location.href = "home.html"
@@ -49,28 +51,56 @@ async function init() {
         window.location.href = "things-to-do.html"
     });
 
+    const lbls = document.querySelectorAll(".img_btn_lbl");
+    for (let x = 0; x < lbls.length; x++) {
+       lbls[x].style.marginLeft = String(document.querySelector("#dance_heart").getBoundingClientRect().width) + "px";
+    }
 
     const vid_node = document.querySelector("#homevideo");
     vid_node.addEventListener("ended", changeGraphic)
     var videos = [document.querySelector("#homevideo")];
 
     const graphic_div = document.querySelector("#graphicdiv");
+
     for(let x = 0; x < locations.length; x++) {
         const temp_vid = document.createElement("video");
         graphic_div.appendChild(temp_vid);
         temp_vid.setAttribute("width", "100%");
         temp_vid.setAttribute("src", locations[x]);
         temp_vid.style.display = "none";
-        temp_vid.addEventListener("ended", changeGraphic)
         temp_vid.setAttribute("width", "99%");
         temp_vid.classList.add("h-graphic")
         videos.push(temp_vid);
+        const fav = document.createElement("img");
+        fav.classList.add("fav")
+        fav.setAttribute("src", "img/heart-unfilled.png");
+        fav.style.marginRight = "1%";
+        fav.style.marginTop = "-1.5%";
+        fav.style.display = "none";
+        graphic_div.appendChild(fav);
+        g_hearts.push(fav);
+        temp_vid.addEventListener("ended", function() {
+            changeGraphic();    
+        });
     }
+
     // create citation and set event for graphic change
     const citation = document.createElement("p");
     citation.classList.add("citation");
     citation.textContent = graphic_citations[0];
     graphic_div.appendChild(citation);
+
+    const hearts = document.querySelectorAll(".fav");
+    for (let x = 0; x < hearts.length; x++) {
+        hearts[x].addEventListener("click", function() {
+            if (hearts[x].getAttribute("src") == "img/heart-unfilled.png") {
+                hearts[x].setAttribute("src", "img/heart-filled.png");
+            }
+            else {
+                hearts[x].setAttribute("src", "img/heart-unfilled.png");
+            }
+        })
+    }
 
     window.addEventListener('resize', updatemargin);
 
@@ -97,11 +127,13 @@ async function init() {
 
     function changeGraphic() {
         videos[index].style.display = "none";
+        g_hearts[index].style.display = "none";
         index += 1;
         if (index == videos.length) {
             index = 0;
         }
         videos[index].style.display = "block";
+        g_hearts[index].style.display = "block";
         videos[index].setAttribute("muted", "muted")
         videos[index].play();
         citation.textContent = graphic_citations[index];

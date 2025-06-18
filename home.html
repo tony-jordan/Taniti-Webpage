@@ -11,41 +11,59 @@
                         <div class="dropdown">
                             <button id="fun_btn" class="dropbtn">Urban and Outdoor Fun!</button>
                             <div class="dropdown-content">
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
+                                <p style="background-color: #327434; font-weight: bold; color: white; text-shadow: 2px 2px black; padding: 8px; font-size:larger;">Urban Adventures!</p>
+                                <a href="#">History Museum</a>
+                                <a href="#">Island Bits Arcade</a>
+                                <a href="#">Lava Groove Dance Club</a>
+                                <a href="#">Palm Pin Bowling Alley</a>
+                                <a href="#">Tiki Flame Brewery</a>
+                                <a href="#">The Molten Mug</a>
+                                <p style="background-color: #327434; font-weight: bold; color: white; text-shadow: 2px 2px black; padding: 8px; font-size:larger;">Outdoor activities!</p>
+                                <a href="#">Mana Skies Helicopter Tours</a>
+                                 <a href="#">Skyfire Ziplines</a>
+                                <p style="background-color: #327434; font-weight: bold; color: white; text-shadow: 2px 2px black; padding: 8px; font-size:larger;">Fine Dining!</p>
+                                <a href="#">Blue Horizon Catch</a>
+                                <a href="#">Crimson Bamboo</a>
+                                <a href="#">Coral & Current</a>
+                                <a href="#">Ember Seafood</a>
+                                <a href="#">Island Smokehouse</a>
+                                <a href="#">Pacific Pearl Fishouse</a>
+                                <a href="#">Salt & Shell</a>
+                                <a href="#">Sunset Range Kitchen</a>
+                                <a href="#">Tidal Wok</a>
+                                <a href="#">Volcano Valley Grill</a>
                             </div>
                         </div>
                         <div class="dropdown">
                             <button id="nature_btn" class="dropbtn">Nature Escapes!</button>
                             <div class="dropdown-content">
                                 <p style="background-color: #327434; font-weight: bold; color: white; text-shadow: 2px 2px black; padding: 8px; font-size:larger;">Beautiful Beaches!</p>
-                                <a href="#">Yellow-Leaf Bay</a>
-                                <a href="#">Prismo Beach</a>
                                 <a href="#">Kaelua Shore</a> <!--Volcano beach-->
+                                <a href="#">Prismo Beach</a>
+                                <a href="#">Yellow-Leaf Bay</a>
                                 <p style="background-color: #327434; font-weight: bold; color: white; text-shadow: 2px 2px black; padding: 8px; font-size:larger;">Active Volcano!</p>
                                 <a href="#">Mount Tūmoko</a>
                                 <p style="background-color: #327434; font-weight: bold; color: white; text-shadow: 2px 2px black; padding: 8px; font-size:larger;">Lush Rainforests!</p>
-                                <a href="#">Vale Oko</a> <!--Hidden valley-->
-                                <a href="#">Te Moari Canopy</a> <!--elevated area (treetop)-->
                                 <a href="#">Ravakiri Falls</a> <!--water-fed pool or sacred bathing site-->
+                                <a href="#">Te Moari Canopy</a> <!--elevated area (treetop)-->
+                                <a href="#">Vale Oko</a> <!--Hidden valley-->
                             </div>
                         </div>
                         <div class="dropdown">
                             <button id="lodging_btn" class="dropbtn">Lodging Options!</button>
                             <div class="dropdown-content">
                                 <p style="background-color: #327434; font-weight: bold; color: white; text-shadow: 2px 2px black;  padding: 8px; font-size:larger;">Hotels</p>
-                                <a href="#">Volcano Drift Inn</a>
-                                <a href="#">The Banyan Reach</a>
-                                <a href="#">Halakoa Lodge</a>
-                                <a href="#">Tideglass Hotel</a>
-                                <a href="#">Moko Trail House</a>
+                                <a href="lodging-options.html#Halakoa-Lodge">Halakoa Lodge</a>
+                                <a href="lodging-options.html#Moko-Trailhouse">Moko Trail House</a>
+                                <a href="lodging-options.html#Banyan-Reach">The Banyan Reach</a>
+                                <a href="lodging-options.html#Tideglass-Hotel">Tideglass Hotel</a>
+                                <a href="lodging-options.html#Volcano-Drift-Inn">Volcano Drift Inn</a>
                                 <p style="background-color: #327434; font-weight: bold; color: white; text-shadow: 2px 2px black; padding: 8px; font-size:larger;">Bed & Breakfasts</p>
-                                <a href="#">Kirikiri Nest</a>
-                                <a href="#">Mama Tia’s Lanai</a>
-                                <a href="#">Rainwake Cottage</a>
+                                <a href="lodging-options.html#Kirikiri-Nest">Kirikiri Nest</a>
+                                <a href="lodging-options.html#Mama-Tias-Lanai">Mama Tia’s Lanai</a>
+                                <a href="lodging-options.html#Rainwake-Cottage">Rainwake Cottage</a>
                                 <p style="background-color: #327434; font-weight: bold; color: white; text-shadow: 2px 2px black;  padding: 8px; font-size:larger;">4-Star Resort</p>
-                                <a href="#">Te Moari Retreat & Spa</a>
+                                <a href="lodging-options.html#Te-Moari-Retreat">Te Moari Retreat & Spa</a>
                             </div>
                         </div>
                         <div class="menu_btn">Plan now!</div>
@@ -61,6 +79,7 @@
     <body style="position: relative; z-index: -6;">
         <div id="graphicdiv">
             <video class="h-graphic" id="homevideo" autoplay="autoplay" width=99% muted src="img/locations/prismo_beach.mp4"></video>
+            <img class="fav" id="graphic-fav" style="margin-right: 1%; margin-top: -1.5%" src="img/heart-unfilled.png">
         </div>
         <div style="max-width: 99%; display:block; text-align: center; justify-content: center; position: relative; z-index: -5;">
             <div class="overview">
@@ -85,15 +104,18 @@
                 <div class="activity-btn">
                     <div style="display: inline-block; max-width: 15%;">
                         <img class="img_btn" src="img/activities/dance-club.jpg">
+                        <img class="fav" id="dance_heart" style="max-width: 6%; margin-right: 1%; margin-top: -1.5%;" src="img/heart-unfilled.png">
                         <p class="img_btn_lbl">Dance Club!</p>
                     </div>
                     <div style="display: inline-block; max-width: 15%;">
                         <img class="img_btn" src="img/activities/museum.jpg">
+                        <img class="fav" style="max-width: 6%; margin-right: 1%; margin-top: -1.5%;" src="img/heart-unfilled.png">
                         <p class="img_btn_lbl">History Museum!</p>
                     </div>
                     <div style="display: inline-block; max-width: 15%;">
                         <img class="img_btn" src="img/activities/resturant.jpg">
-                        <p class="img_btn_lbl">Several Resturants!</p>
+                        <img class="fav" style="max-width: 6%; margin-right: 1%; margin-top: -1.5%;" src="img/heart-unfilled.png">
+                        <p class="img_btn_lbl">Ember Seafood</p>
                     </div>
                 </div>
                 <div style="padding-bottom: 5%;"></div>
@@ -108,14 +130,17 @@
                 <div class="activity-btn">
                     <div style="display: inline-block; max-width: 15%;">
                         <img class="img_btn" src="img/locations/Mount Tumoko.jpg">
+                        <img class="fav" style="max-width: 6%; margin-right: 1%; margin-top: -1.5%;" src="img/heart-unfilled.png">
                         <p class="img_btn_lbl">Mount Tumoko!</p>
                     </div>
                     <div style="display: inline-block; max-width: 15%;">
                         <img class="img_btn" src="img/locations/Te Moari Canopy.jpg">
+                        <img class="fav" style="max-width: 6%; margin-right: 1%; margin-top: -1.5%;" src="img/heart-unfilled.png">
                         <p class="img_btn_lbl">Te Moari Canopy!</p>
                     </div>
                     <div style="display: inline-block; max-width: 15%;">
                         <img class="img_btn" src="img/locations/Kaelua Shore.jpg">
+                        <img class="fav" style="max-width: 6%; margin-right: 1%; margin-top: -1.5%;" src="img/heart-unfilled.png">
                         <p class="img_btn_lbl">Kaelua Shore!</p>
                     </div>
                 </div>

@@ -25,4 +25,16 @@ async function init() {
     citation.classList.add("citation");
     citation.textContent = "Dubler, S. (n.d.). photo-of-brown-bench-near-swimming-pool-Koei_7yYtIo. https://unsplash.com/photos/photo-of-brown-bench-near-swimming-pool-Koei_7yYtIo. Retrieved June 17, 2025, from https://unsplash.com/photos/photo-of-brown-bench-near-swimming-pool-Koei_7yYtIo.";
     graphic_div.appendChild(citation);
+
+    const hearts = document.querySelectorAll(".fav");
+    for (let x = 0; x < hearts.length; x++) {
+        hearts[x].addEventListener("click", function() {
+            if (hearts[x].getAttribute("src") == "img/heart-unfilled.png") {
+                hearts[x].setAttribute("src", "img/heart-filled.png");
+            }
+            else {
+                hearts[x].setAttribute("src", "img/heart-unfilled.png");
+            }
+        })
+    }
 }
