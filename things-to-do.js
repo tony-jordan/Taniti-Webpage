@@ -19,11 +19,30 @@ async function init() {
         window.location.href = "things-to-do.html"
     });
 
+    const plan_btn = document.querySelector("#plan-now");
+    plan_btn.addEventListener("click", function() {
+        window.location.href = "plan-now.html";
+    });
+
+    const graphic1 = document.querySelector(".h-graphic");
+    graphic1.addEventListener("mouseover", function() {
+        graphic1.style = "cursor: default;";
+    })
+
+    const navbar = document.querySelector(".navbar");
+
+    const placeholder = document.querySelector("#placeholder");
+    placeholder.style.height = String(document.querySelector(".head").clientHeight) + "px";
+
+    const graphic = document.querySelector(".h-graphic");
+    graphic.style.top = String(0 - (document.querySelector(".head").clientHeight + navbar.clientHeight)) + "px";
+
     const graphic_div = document.querySelector("#graphicdiv");
+
     // create citation and set event for graphic change
     const citation = document.createElement("p");
     citation.classList.add("citation");
-    citation.textContent = "Mayer, N. (n.d.). village-aerial-photography-BWSDI-6YLW4. https://unsplash.com/photos/village-aerial-photography-BWSDI-6YLW4. Retrieved June 17, 2025, from https://unsplash.com/photos/village-aerial-photography-BWSDI-6YLW4.";
+    citation.textContent = "Mayer, N. (2018). village-aerial-photography-BWSDI-6YLW4. https://unsplash.com/photos/village-aerial-photography-BWSDI-6YLW4. Retrieved June 17, 2025, from https://unsplash.com/photos/village-aerial-photography-BWSDI-6YLW4.";
     graphic_div.appendChild(citation);
 
     const hearts = document.querySelectorAll(".fav");

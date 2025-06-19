@@ -12,23 +12,25 @@ async function init() {
 
     ];
 
+    const hrefs = ["Prismo-Beach", "Yellow-Leaf-Bay", "Kaelua-Shore", "Mount-Tumoko", "Ravakiri-Falls"];
+
     const graphic_citations = [
-        "WinstonRHA. (n.d.-b). sunset-beach-pismo-beach-palm-trees-129736. pixabay.com. Retrieved June 14, 2025, from https://pixabay.com/videos/sunset-beach-pismo-beach-palm-trees-129736/.",
-        "Echeverri, M. (n.d.). bike-beach-biker-mountain-bike-72566. pixabay.com. Retrieved June 14, 2025, from https://pixabay.com/videos/bike-beach-biker-mountain-bike-72566/.",
-        "Lukin, A. (n.d.). costa-rica-caribbean-sea-sky-drone-139487. https://pixabay.com/videos/costa-rica-caribbean-sea-sky-drone-139487/. Retrieved June 16, 2025, from https://pixabay.com/videos/costa-rica-caribbean-sea-sky-drone-139487/.",
-        "Lam, T. (n.d.). lava-volcano-lava-flow-fire-crater-219834/. https://pixabay.com/videos/lava-volcano-lava-flow-fire-crater-219834/. Retrieved June 17, 2025, from https://pixabay.com/videos/lava-volcano-lava-flow-fire-crater-219834/.",
-        "Ronin Studio. (n.d.). waterfall-water-river-nature-37088. https://pixabay.com/videos/waterfall-water-river-nature-37088/. Retrieved June 17, 2025, from https://pixabay.com/videos/waterfall-water-river-nature-37088/."
+        "WinstonRHA. (2022). sunset-beach-pismo-beach-palm-trees-129736. pixabay.com. Retrieved June 14, 2025, from https://pixabay.com/videos/sunset-beach-pismo-beach-palm-trees-129736/.",
+        "Echeverri, M. (2021). bike-beach-biker-mountain-bike-72566. pixabay.com. Retrieved June 14, 2025, from https://pixabay.com/videos/bike-beach-biker-mountain-bike-72566/.",
+        "Lukin, A. (2022). costa-rica-caribbean-sea-sky-drone-139487. https://pixabay.com/videos/costa-rica-caribbean-sea-sky-drone-139487/. Retrieved June 16, 2025, from https://pixabay.com/videos/costa-rica-caribbean-sea-sky-drone-139487/.",
+        "Lam, T. (2024). lava-volcano-lava-flow-fire-crater-219834/. https://pixabay.com/videos/lava-volcano-lava-flow-fire-crater-219834/. Retrieved June 17, 2025, from https://pixabay.com/videos/lava-volcano-lava-flow-fire-crater-219834/.",
+        "Ronin Studio. (2020). waterfall-water-river-nature-37088. https://pixabay.com/videos/waterfall-water-river-nature-37088/. Retrieved June 17, 2025, from https://pixabay.com/videos/waterfall-water-river-nature-37088/."
     ]
 
     const btn_citations1 = [
-        "Popov, A. (n.d.). a-group-of-people-standing-around-in-a-room-9vDdkxSCAD4. https://unsplash.com/photos/a-group-of-people-standing-around-in-a-room-9vDdkxSCAD4. Retrieved June 16, 2025, from https://unsplash.com/photos/a-group-of-people-standing-around-in-a-room-9vDdkxSCAD4.", // dance club
-        "Schwarz, D. J. (n.d.). white-concrete-building-under-white-clouds-during-daytime-EhaYSYy3Zdk. https://unsplash.com/photos/white-concrete-building-under-white-clouds-during-daytime-EhaYSYy3Zdk. Retrieved June 16, 2025, from https://unsplash.com/photos/white-concrete-building-under-white-clouds-during-daytime-EhaYSYy3Zdk.", // museum
-        "Wennington, J. (n.d.). dish-on-white-ceramic-plate-N_Y88TWmGwA. https://unsplash.com/photos/dish-on-white-ceramic-plate-N_Y88TWmGwA. Retrieved June 16, 2025, from https://unsplash.com/photos/dish-on-white-ceramic-plate-N_Y88TWmGwA." // dish
+        "Popov, A. (2019). a-group-of-people-standing-around-in-a-room-9vDdkxSCAD4. https://unsplash.com/photos/a-group-of-people-standing-around-in-a-room-9vDdkxSCAD4. Retrieved June 16, 2025, from https://unsplash.com/photos/a-group-of-people-standing-around-in-a-room-9vDdkxSCAD4.", // dance club
+        "Schwarz, D. J. (2020). white-concrete-building-under-white-clouds-during-daytime-EhaYSYy3Zdk. https://unsplash.com/photos/white-concrete-building-under-white-clouds-during-daytime-EhaYSYy3Zdk. Retrieved June 16, 2025, from https://unsplash.com/photos/white-concrete-building-under-white-clouds-during-daytime-EhaYSYy3Zdk.", // museum
+        "Wennington, J. (2014). dish-on-white-ceramic-plate-N_Y88TWmGwA. https://unsplash.com/photos/dish-on-white-ceramic-plate-N_Y88TWmGwA. Retrieved June 16, 2025, from https://unsplash.com/photos/dish-on-white-ceramic-plate-N_Y88TWmGwA." // dish
     ]
     const btn_citations2 = [
-        "Elliott, T. (n.d.-a). brown-mountain-under-gray-clouds-mBXXP7ns6lM. https://unsplash.com/photos/brown-mountain-under-gray-clouds-mBXXP7ns6lM. Retrieved June 17, 2025, from https://unsplash.com/photos/brown-mountain-under-gray-clouds-mBXXP7ns6lM.",
-        "Kettle, J. (n.d.). a-wooden-bridge-in-the-woods-zV4FJUo8MeE. https://unsplash.com/photos/a-wooden-bridge-in-the-woods-zV4FJUo8MeE. Retrieved June 17, 2025, from https://unsplash.com/photos/a-wooden-bridge-in-the-woods-zV4FJUo8MeE.",
-        "Santos, B. (n.d.). a-body-of-water-surrounded-by-mountains-and-trees-D8h8lXjVFa4. https://unsplash.com/photos/a-body-of-water-surrounded-by-mountains-and-trees-D8h8lXjVFa4. Retrieved June 17, 2025, from https://unsplash.com/photos/a-body-of-water-surrounded-by-mountains-and-trees-D8h8lXjVFa4."
+        "Elliott, T. (2021). brown-mountain-under-gray-clouds-mBXXP7ns6lM. https://unsplash.com/photos/brown-mountain-under-gray-clouds-mBXXP7ns6lM. Retrieved June 17, 2025, from https://unsplash.com/photos/brown-mountain-under-gray-clouds-mBXXP7ns6lM.",
+        "Kettle, J. (2020). a-wooden-bridge-in-the-woods-zV4FJUo8MeE. https://unsplash.com/photos/a-wooden-bridge-in-the-woods-zV4FJUo8MeE. Retrieved June 17, 2025, from https://unsplash.com/photos/a-wooden-bridge-in-the-woods-zV4FJUo8MeE.",
+        "Santos, B. (2024). a-body-of-water-surrounded-by-mountains-and-trees-D8h8lXjVFa4. https://unsplash.com/photos/a-body-of-water-surrounded-by-mountains-and-trees-D8h8lXjVFa4. Retrieved June 17, 2025, from https://unsplash.com/photos/a-body-of-water-surrounded-by-mountains-and-trees-D8h8lXjVFa4."
     ]
 
     var g_hearts = [document.querySelector("#graphic-fav")];
@@ -51,16 +53,40 @@ async function init() {
         window.location.href = "things-to-do.html"
     });
 
+    const plan_btn = document.querySelector("#plan-now");
+    plan_btn.addEventListener("click", function() {
+        window.location.href = "plan-now.html";
+    });
+
     const lbls = document.querySelectorAll(".img_btn_lbl");
     for (let x = 0; x < lbls.length; x++) {
        lbls[x].style.marginLeft = String(document.querySelector("#dance_heart").getBoundingClientRect().width) + "px";
     }
 
-    const vid_node = document.querySelector("#homevideo");
+    const vid_node = document.querySelector("#Prismo-Beach");
     vid_node.addEventListener("ended", changeGraphic)
-    var videos = [document.querySelector("#homevideo")];
+    var videos = [vid_node];
+    videos[0].addEventListener("click", function() {
+        window.location.href = "places-to-go.html#Prismo-Beach"
+    });
 
     const graphic_div = document.querySelector("#graphicdiv");
+    graphic_div.addEventListener("click", function() {
+        for (let x = 0; x < videos.length; x++) {
+            if (videos[x].style.display != "none") {
+                window.location.href = "places-to-go.html#" + hrefs[x];
+                break;
+            }
+        }
+    });
+
+    const navbar = document.querySelector(".navbar");
+
+    const placeholder = document.querySelector("#placeholder");
+    placeholder.style.height = String(document.querySelector(".head").clientHeight) + "px";
+
+    graphic_div.style.marginTop = String(0 - (document.querySelector(".head").clientHeight + navbar.clientHeight)) + "px";
+    document.querySelector(".head").top = String(0-.5) + "%";
 
     for(let x = 0; x < locations.length; x++) {
         const temp_vid = document.createElement("video");
@@ -69,7 +95,8 @@ async function init() {
         temp_vid.setAttribute("src", locations[x]);
         temp_vid.style.display = "none";
         temp_vid.setAttribute("width", "99%");
-        temp_vid.classList.add("h-graphic")
+        temp_vid.classList.add("h-graphic");
+        //temp_vid.style.top = String(0 - (document.querySelector(".head").clientHeight + navbar.clientHeight)) + "px";
         videos.push(temp_vid);
         const fav = document.createElement("img");
         fav.classList.add("fav")
@@ -79,11 +106,9 @@ async function init() {
         fav.style.display = "none";
         graphic_div.appendChild(fav);
         g_hearts.push(fav);
+        fav.setAttribute("id", "places-to-go.html#" + hrefs[x]);
         temp_vid.addEventListener("ended", function() {
             changeGraphic();    
-        });
-        temp_vid.addEventListener("click", function() {
-            window.location.href = ""
         });
     }
 
@@ -127,6 +152,9 @@ async function init() {
         });
         img_btns[x].addEventListener("mouseleave", function() {
             document.querySelector("#btn_citation2").style.visibility = "hidden";
+        });
+        img_btns[x].addEventListener("click", function() {
+            window.location.href = img_btns[x].getAttribute("id");
         });
     }
     

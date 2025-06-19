@@ -19,12 +19,30 @@ async function init() {
         window.location.href = "things-to-do.html"
     });
 
+    const plan_btn = document.querySelector("#plan-now");
+    plan_btn.addEventListener("click", function() {
+        window.location.href = "plan-now.html";
+    });
+
+    const graphic1 = document.querySelector(".h-graphic");
+    graphic1.addEventListener("click", function() {
+        window.location.href = "places-to-go.html#Mount-Tumoko"
+    })
+
+    const navbar = document.querySelector(".navbar");
+
+    const placeholder = document.querySelector("#placeholder");
+    placeholder.style.height = String(document.querySelector(".head").clientHeight) + "px";
+
+    const graphic = document.querySelector(".h-graphic");
+    graphic.style.top = String(0 - (document.querySelector(".head").clientHeight + navbar.clientHeight)) + "px";
     
     const graphic_div = document.querySelector("#graphicdiv");
+
     // create citation and set event for graphic change
     const citation = document.createElement("p");
     citation.classList.add("citation");
-    citation.textContent = "Weronika. (n.d.). green-palm-trees-near-mountain-during-daytime-wSEv7Nanuxc. https://unsplash.com/photos/green-palm-trees-near-mountain-during-daytime-wSEv7Nanuxc. Retrieved June 17, 2025, from https://unsplash.com/photos/green-palm-trees-near-mountain-during-daytime-wSEv7Nanuxc.";
+    citation.textContent = "Weronika. (2020). green-palm-trees-near-mountain-during-daytime-wSEv7Nanuxc. https://unsplash.com/photos/green-palm-trees-near-mountain-during-daytime-wSEv7Nanuxc. Retrieved June 17, 2025, from https://unsplash.com/photos/green-palm-trees-near-mountain-during-daytime-wSEv7Nanuxc.";
     graphic_div.appendChild(citation);
 
     const hearts = document.querySelectorAll(".fav");
