@@ -82,6 +82,9 @@ async function init() {
         temp_vid.addEventListener("ended", function() {
             changeGraphic();    
         });
+        temp_vid.addEventListener("click", function() {
+            window.location.href = ""
+        });
     }
 
     // create citation and set event for graphic change
@@ -113,6 +116,9 @@ async function init() {
         img_btns[x].addEventListener("mouseleave", function() {
             document.querySelector("#btn_citation1").style.visibility = "hidden";
         });
+        img_btns[x].addEventListener("click", function() {
+            window.location.href = img_btns[x].getAttribute("id");
+        });
     }
     for (let x = 3; x < 6; x++) {
         img_btns[x].addEventListener("mouseover", function() {
@@ -143,23 +149,21 @@ async function init() {
         const margin = document.querySelector(".plan_text");
         if (window.outerWidth < 543) {
             document.querySelector("#cnr").style.display = "none"
-            document.querySelector("#menu_btn").style.float = "none";
+            document.querySelector(".menu_btn").style.float = "none";
         }
-        else if (window.outerWidth < 595) {
+        if (window.outerWidth < 595) {
             document.querySelector("#overview-title").style.fontSize = "600%";
         }
-        else if (window.outerWidth < 698) {
+        if (window.outerWidth < 698) {
             margin.style.display = "none"
         }
-        else if (window.outerWidth < 1045) {
+        if (window.outerWidth < 1045) {
             document.querySelector(".overview").style.maxWidth = "100%";
             const txts = document.querySelectorAll("#overview-text");
             for (let x = 0; x < txts.length; x++) {
-                txts[x].style.margin = "0% 10%";
-                txts[x].style.fontSize = "x-large";
-            }
-            txts[x].style.margin = "0%";
+                txts[x].style.margin = "0%, 10%";
             txts[x].style.fontSize = "medium"
+            }
             const lbls = document.querySelectorAll(".img_btn_lbl");
             for (let x = 0; x < lbls.length; x++) {
                 lbls[x].style.fontSize = "xx-small";
@@ -175,7 +179,7 @@ async function init() {
             margin.style.display = "inline";
             document.querySelector("#overview-title").style.fontSize = "700%";
             document.querySelector("#cnr").style.display = "inline";
-            document.querySelector("#menu_btn").style.float = "right";
+            document.querySelector(".menu_btn").style.float = "right";
             const lbls = document.querySelectorAll(".img_btn_lbl");
             for (let x = 0; x < lbls.length; x++) {
                 lbls[x].style.fontSize = "small";

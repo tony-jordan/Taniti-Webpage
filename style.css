@@ -19,10 +19,19 @@ body {
   cursor: pointer;
 }
 
+.head {
+  z-index: 1;
+}
+
 .h-graphic {
     position: relative;
     display: block;
-    z-index: -999;
+    z-index: 0;
+}
+
+.graphicdiv {
+  position: relative;
+  z-index: -99;
 }
 
 /* Style The Dropdown Button */
@@ -165,6 +174,7 @@ body {
 
 .img_btn:hover {
   filter: blur(2px);
+  cursor: pointer;
 }
 
 .img_btn_lbl {
@@ -194,4 +204,5 @@ body {
 
 .img_btn_lbl {
   text-align: center;
+  white-space: pre;
 }

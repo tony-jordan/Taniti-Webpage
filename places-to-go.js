@@ -26,4 +26,16 @@ async function init() {
     citation.classList.add("citation");
     citation.textContent = "Weronika. (n.d.). green-palm-trees-near-mountain-during-daytime-wSEv7Nanuxc. https://unsplash.com/photos/green-palm-trees-near-mountain-during-daytime-wSEv7Nanuxc. Retrieved June 17, 2025, from https://unsplash.com/photos/green-palm-trees-near-mountain-during-daytime-wSEv7Nanuxc.";
     graphic_div.appendChild(citation);
+
+    const hearts = document.querySelectorAll(".fav");
+    for (let x = 0; x < hearts.length; x++) {
+        hearts[x].addEventListener("click", function() {
+            if (hearts[x].getAttribute("src") == "img/heart-unfilled.png") {
+                hearts[x].setAttribute("src", "img/heart-filled.png");
+            }
+            else {
+                hearts[x].setAttribute("src", "img/heart-unfilled.png");
+            }
+        })
+    }
 }
