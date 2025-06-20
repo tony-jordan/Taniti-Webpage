@@ -30,15 +30,14 @@ async function init() {
     })
 
     const navbar = document.querySelector(".navbar");
+    const graphic_div = document.querySelector("#graphicdiv");
 
     const placeholder = document.querySelector("#placeholder");
     placeholder.style.height = String(document.querySelector(".head").clientHeight) + "px";
 
-    const graphic = document.querySelector(".h-graphic");
-    graphic.style.top = String(0 - (document.querySelector(".head").clientHeight + navbar.clientHeight)) + "px";
+    graphic_div.style.marginTop = String(0 - (document.querySelector(".head").clientHeight + navbar.clientHeight)) + "px";
+    document.querySelector(".head").top = String(0-.5) + "%";
     
-    const graphic_div = document.querySelector("#graphicdiv");
-
     // create citation and set event for graphic change
     const citation = document.createElement("p");
     citation.classList.add("citation");
