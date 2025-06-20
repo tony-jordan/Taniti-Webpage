@@ -31,6 +31,9 @@ async function init() {
 
     const navbar = document.querySelector(".navbar");
     const graphic_div = document.querySelector("#graphicdiv");
+    graphic_div.addEventListener("click", function() {
+        window.location.href = "#Mount-Tumoko";
+    })
 
     const placeholder = document.querySelector("#placeholder");
     placeholder.style.height = String(document.querySelector(".head").clientHeight) + "px";
